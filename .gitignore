@@ -38,3 +38,8 @@ out/
 
 ### Kotlin ###
 .kotlin
+.gitattributes
+src/main/resources/application.yaml
+gradlew
+gradlew.bat
+gradle/*
