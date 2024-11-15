@@ -13,4 +13,12 @@ class CoroutineService {
         return "hello"
     }
     fun getString(word : String) = word
+
+    fun checkWhen(inputInt : Number): String{
+        when(inputInt){
+            0,1,2,3,4,5,6,7,8,9,10 -> return "Number"
+            else -> return "else"
+        }
+    }
+
 }

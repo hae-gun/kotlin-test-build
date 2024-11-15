@@ -16,6 +16,7 @@ fun Long.betterThan(compare: Long){
 }
 
 class CoroutineControllerTest(){
+
     @Test
     fun call_method(){
         val myFunction = CoroutineService()
@@ -25,13 +26,19 @@ class CoroutineControllerTest(){
     }
     @Test
     fun testCoroutineFunction() = runTest{
-        val time = System.currentTimeMillis()
         val myFunction = CoroutineService()
+        val time = System.currentTimeMillis()
         val doWorld = myFunction.doWorld()
         val time2 = System.currentTimeMillis()
         time2.betterThan(time)
         doWorld.shouldBeEqualTo("hello")
+    }
 
+    @Test
+    fun whenTest() {
+        val myFunction = CoroutineService()
+        assertEquals("Number", myFunction.checkWhen(1))
+        assertEquals("else", myFunction.checkWhen(-1))
     }
 }
 
