@@ -21,8 +21,8 @@ class UpdateServiceImplTest (
     fun setDomain() {
 
     }
-    @RepeatedTest(3)
-    fun getDomain() = runTest{
+    @Test
+    fun 두개의_thread에서_동일한_도메인필드수정시_테스트() = runTest{
         service.enrollDomains(1, "myname", "myemail")
 
         service.updateDomainEmail(1, "change1")
